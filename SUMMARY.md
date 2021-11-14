@@ -6,5 +6,5 @@
 ## Reference
 
 * [API Reference](reference/api-reference/README.md)
-  * [Pets](reference/api-reference/pets.md)
+  * [Commands](reference/api-reference/commands.md)
   * [Users](reference/api-reference/users.md)
