@@ -1,6 +1,6 @@
 # Commands
 
-## Creating a new command
+## Creating a command
 
 ```javascript
 command.register(owner, (sender, cmd, label, args) => {
