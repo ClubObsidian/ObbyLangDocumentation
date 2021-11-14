@@ -4,13 +4,13 @@
 **Good to know:** A quick start guide can be good to help folks get up and running with your API in a few steps. Some people prefer diving in with the basics rather than meticulously reading every page of documentation!
 {% endhint %}
 
-## Get your API keys
+## Creating a script
 
-Your API requests are authenticated using API keys. Any request that doesn't include an API key will return an error.
+We are going to assume that you have the plugin installed already, if you don't you should do that first.
 
-You can generate an API key from your Dashboard at any time.
+Once that is done navigate to `plugins/ObbyLang/scripts` and create a file named `test.js`
 
-## Install the library
+## Creating a listener
 
 The best way to interact with our API is to use one of our official libraries:
 
@@ -34,7 +34,7 @@ pip install --upgrade myapi
 **Good to know:** Using tabs to separate out different languages is a great way to present technical examples or code documentation without cramming your docs with extra sections or pages per language.
 {% endhint %}
 
-## Make your first request
+## Creating a command
 
 To make your first request, send an authenticated request to the pets endpoint. This will create a `pet`, which is nice.
 
