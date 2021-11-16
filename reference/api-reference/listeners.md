@@ -2,24 +2,37 @@
 
 ## Creating a listener
 
-```
-// Some code
+```javascript
+listener.register(owner, (event) => {
+  const player = event.getPlayer();
+  player.sendMessage("Hello World!");
+}, "BlockPlaceEvent");
 ```
 
 ## Registering with a different event priority
 
-```
-// Some code
+```javascript
+listener.register(owner, (event) => {
+  const player = event.getPlayer();
+  player.sendMessage("Hello World!");
+}, "BlockPlaceEvent", "LOWEST");
 ```
 
 {% hint style="info" %}
+Events can have different priority and they run in the specified order
 
+* LOWEST
+* LOW
+* NORMAL
+* HIGH
+* HIGHEST
+* MONITOR
 {% endhint %}
 
-## Unregistering a listener
+## Unregistering script listeners
 
-```
-a
+```javascript
+listener.unregister(owner);
 ```
 
 {% hint style="info" %}
