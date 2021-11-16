@@ -6,7 +6,6 @@
 ## Reference
 
 * [API Reference](reference/api-reference/README.md)
-  * [Built-in extensions](reference/api-reference/built-in-extensions.md)
   * [Configuration](reference/api-reference/configuration.md)
   * [Commands](reference/api-reference/commands.md)
   * [Listeners](reference/api-reference/listeners.md)
