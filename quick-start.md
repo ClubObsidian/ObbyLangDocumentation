@@ -1,128 +1,36 @@
 # Quick Start
 
-{% hint style="info" %}
-**Good to know:** A quick start guide can be good to help folks get up and running with your API in a few steps. Some people prefer diving in with the basics rather than meticulously reading every page of documentation!
-{% endhint %}
-
 ## Creating a script
 
-We are going to assume that you have the plugin installed already, if you don't you should do that first.
-
-Once that is done navigate to `plugins/ObbyLang/scripts` and create a file named `test.js`
+We are going to assume that you have the plugin installed already, if you don't you should do that first. Once that is done navigate to `plugins/ObbyLang/scripts` and create a file named `test.js`
 
 ## Creating a listener
 
-The best way to interact with our API is to use one of our official libraries:
-
-{% tabs %}
-{% tab title="Node" %}
+```javascript
+listener.register(owner, (event) => {
+  const player = event.getPlayer();
+  player.sendMessage("Hello World!");
+}, "BlockPlaceEvent");ja
 ```
-# Install via NPM
-npm install --save my-api
-```
-{% endtab %}
-
-{% tab title="Python" %}
-```
-# Install via pip
-pip install --upgrade myapi
-```
-{% endtab %}
-{% endtabs %}
-
-{% hint style="info" %}
-**Good to know:** Using tabs to separate out different languages is a great way to present technical examples or code documentation without cramming your docs with extra sections or pages per language.
-{% endhint %}
 
 ## Creating a command
 
-To make your first request, send an authenticated request to the pets endpoint. This will create a `pet`, which is nice.
-
-{% swagger baseUrl="https://api.myapi.com/v1" method="post" path="/pet" summary="Create pet." %}
-{% swagger-description %}
-Creates a new pet.
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="name" required="true" type="string" %}
-The name of the pet
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="owner_id" required="false" type="string" %}
-The 
-
-`id`
-
- of the user who owns the pet
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="species" required="false" type="string" %}
-The species of the pet
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="breed" required="false" type="string" %}
-The breed of the pet
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="Pet successfully created" %}
 ```javascript
-{
-    "name"="Wilson",
-    "owner": {
-        "id": "sha7891bikojbkreuy",
-        "name": "Samuel Passet",
-    "species": "Dog",}
-    "breed": "Golden Retriever",
-}
+command.register(owner, (sender, cmd, label, args) => {
+  sender.sendMessage("Hello World!");
+}, "test");j
 ```
-{% endswagger-response %}
 
-{% swagger-response status="401" description="Permission denied" %}
+## Working with commands
 
-{% endswagger-response %}
-{% endswagger %}
+The base command for ObbyLang is /obbylang or /ol. Below you will find the usage of the ObbyLang commands.
 
-{% hint style="info" %}
-**Good to know:** You can use the API Method block to fully document an API method. You can also sync your API blocks with an OpenAPI file or URL to auto-populate them.
-{% endhint %}
+/obbylang - Shows the help map
 
-Take a look at how you might call this method using our official libraries, or via `curl`:
+/obbylang reload \<script> - Reloads a script with the specified name
 
-{% tabs %}
-{% tab title="curl" %}
-```
-curl https://api.myapi.com/v1/pet  
-    -u YOUR_API_KEY:  
-    -d name='Wilson'  
-    -d species='dog'  
-    -d owner_id='sha7891bikojbkreuy'  
-```
-{% endtab %}
+/obbylang unload \<script> - Unloads a script, will be loaded on next restart
 
-{% tab title="Node" %}
-```javascript
-// require the myapi module and set it up with your API key
-const myapi = require('myapi')(YOUR_API_KEY);
+/obbyland disable \<script> - Disabled a script, renames it to scriptname.js.dis
 
-const newPet = away myapi.pet.create({
-    name: 'Wilson',
-    owner_id: 'sha7891bikojbkreuy',
-    species: 'Dog',
-    breed: 'Golden Retriever',
-})
-```
-{% endtab %}
-
-{% tab title="Python" %}
-```python
-// Set your API key before making the request
-myapi.api_key = YOUR_API_KEY
-
-myapi.Pet.create(
-    name='Wilson',
-    owner_id='sha7891bikojbkreuy',
-    species='Dog',
-    breed='Golden Retriever',
-)
-```
-{% endtab %}
-{% endtabs %}
+/obbylang enable \<script> - Enables a previously disabled script
