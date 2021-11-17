@@ -78,7 +78,7 @@ Everything you need to know about redis
 
 Everything you need to know about schedulers
 
-{% content-ref url="scheduler.md" %}
-[scheduler.md](scheduler.md)
+{% content-ref url="schedulers.md" %}
+[schedulers.md](schedulers.md)
 {% endcontent-ref %}
 

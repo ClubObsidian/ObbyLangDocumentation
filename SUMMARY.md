@@ -17,4 +17,4 @@
   * [Messages](reference/api-reference/messages.md)
   * [Proxy](reference/api-reference/proxy.md)
   * [Redis](reference/api-reference/redis.md)
-  * [Scheduler](reference/api-reference/scheduler.md)
+  * [Schedulers](reference/api-reference/schedulers.md)
