@@ -48,5 +48,5 @@ command.register(owner, (sender, cmd, label, args) => {
   } 
   //Do something else
   return true;
-}, "test", "test1", "test2");
+}, ["test", "test1", "test2"]);
 ```
