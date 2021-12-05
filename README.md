@@ -6,11 +6,11 @@ description: Documentation for ObbyLang
 
 ## Welcome to ObbyLang
 
-Welcome to MyAPI! Here you'll find all the documentation you need to get up and running with the ObbyLang.
+Welcome to the ObbyLang documentation! Here you'll find all the documentation you need to get up and running with ObbyLang.
 
 ## Want to jump right in?
 
-Feeling like an eager beaver? Jump in to the quick start docs to start programming:
+We recommend you look at the quick start first to get a feel for ObbyLang and then take a look at the API Reference so that you can get a feel for the full scope of ObbyLang!
 
 {% content-ref url="quick-start.md" %}
 [quick-start.md](quick-start.md)
